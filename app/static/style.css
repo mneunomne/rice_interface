@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+}
+
+.box {
+  position: absolute;
+  transition: opacity 0.4s;
+}
+
+.box.hidden {
+  opacity: 0;
+}
+
+.wrapper {
+  position: absolute;
+  width: 70%;
+  height: 200px;
+  z-index: 9999999;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#logs {
+  bottom: 100px;
+  position: absolute;
+  left: 15%;
+  z-index: 99999;
+  font-family: monospace;
+  color: white;
+}
+
+#logs p {
+  margin: 0;
+}
+
+.bar {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  border-right: solid 2px blue;
+  z-index: 999;
+  filter: drop-shadow(4px 2px 6px black);
+  left: 0%;
+  transition: opacity 0.4s;
+}
+
+.bar.play {
+  left: 100%;
+}
+
+.bar.start {
+  left: 0% !important;
+}
+
+.bar.hidden {
+  left: 100%;
+  opacity: 0;
+}
+
+#waveform0, #waveform1 {
+  filter: drop-shadow(4px 2px 6px black);
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+#text {
+  font-size: 6px;
+  overflow: hidden;
+}
+
+#video {
+  position: absolute;
+  transform-origin: calc(100vw/2);
+  transform: rotate(90deg);
+  width: 100vh;
+  height: 100vw;
+  background: beige;
+}
+
+#cropped {
+  opacity: 0;
+  left: 177px;
+  width: 297px;
+  height: 420px;
+  top: 75%;
+  position: absolute;
+  background: white;
+}
